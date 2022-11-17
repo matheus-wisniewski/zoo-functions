@@ -1,7 +1,13 @@
 const data = require('../data/zoo_data');
 
-function getSpeciesByIds(ids) {
-  // seu código aqui
-}
-
+const getSpeciesByIds = (...ids) => {
+  const arrOfSpecies = [];
+  ids.forEach((specieId) => {
+    data.species.forEach((animal, index) => {
+      if (animal.id === specieId) {
+        arrOfSpecies.push(data.species[index]);
+      }
+    });
+  }); return arrOfSpecies;
+};
 module.exports = getSpeciesByIds;
