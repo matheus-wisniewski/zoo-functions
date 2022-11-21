@@ -2,7 +2,7 @@ const data = require('../data/zoo_data');
 
 const { employees } = data;
 
-function getEmployeeByName(employeeName) {
+const getEmployeeByName = (employeeName) => {
   const getEmployee = employees.find(
     (employee) =>
       employee.firstName === employeeName
@@ -14,7 +14,7 @@ function getEmployeeByName(employeeName) {
   }
 
   return getEmployee;
-}
+};
 
 console.log(getEmployeeByName('Burl'));
 
